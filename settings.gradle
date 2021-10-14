@@ -1,11 +1,6 @@
 rootProject.name = 'pippin'
 
-include 'groovy-demo'
 
-include 'pippin-common:common-utils'
-include 'pippin-common:common-pre:pre-technical'
-include 'pippin-common:common-persistence:persistence-jpa'
-include 'pippin-common:common-persistence:persistence-mybatis'
 include 'pippin-service:service-alipay'
 include 'pippin-service:service-image'
 include 'pippin-service:service-jwt'

@@ -1,8 +1,10 @@
 archivesBaseName = 'simple-spring-boot-starter'
 dependencies {
-    implementation(project(':pippin-common:common-utils')){
+
+    implementation('io.github.rothschil:common-utils:1.1.3.RELEASE'){
         exclude group:'com.alibaba', module: 'druid-spring-boot-starter'
         exclude group:'com.oracle', module: 'ojdbc6'
         exclude group:'mysql', module: 'mysql-connector-java'
     }
 }
+jar.enabled=true
