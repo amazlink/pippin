@@ -5,6 +5,7 @@ dependencies {
         exclude group:'com.oracle', module: 'ojdbc6'
         exclude group:'mysql', module: 'mysql-connector-java'
     }
+    implementation 'org.jboss.logging:jboss-logging:3.4.2.Final'
 
     implementation 'com.h2database:h2:1.4.200'
 
