@@ -70,7 +70,7 @@ public class JSONUtils {
             objectMapper.setSerializationInclusion(include);
             return objectMapper.writeValueAsString(o);
         } catch (JsonProcessingException e) {
-            throw new DrunkardException(Status.JSON_SERIALIZE_EXCEPTION.getStatus(), "JSON序列化处理异常，" + e);
+            throw new DrunkardException(Status.SERIALIZE_FAIL.getStatus(), "JSON序列化处理异常，" + e);
         }
     }
 
@@ -102,7 +102,7 @@ public class JSONUtils {
             objectMapper.setSerializationInclusion(include);
             return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(o);
         } catch (JsonProcessingException e) {
-            throw new DrunkardException(Status.JSON_SERIALIZE_EXCEPTION.getStatus(), "JSON序列化处理异常，" + e);
+            throw new DrunkardException(Status.SERIALIZE_FAIL.getStatus(), "JSON序列化处理异常，" + e);
         }
     }
 
@@ -114,9 +114,9 @@ public class JSONUtils {
         try {
             return objectMapper.readValue(file, responseType);
         } catch (JsonMappingException e) {
-            throw new DrunkardException(Status.JSON_DESERIALIZE_EXCEPTION.getStatus(), "JSON转换对应关系异常，" + e);
+            throw new DrunkardException(Status.DESERIALIZE_FAIL.getStatus(), "JSON转换对应关系异常，" + e);
         } catch (JsonParseException e) {
-            throw new DrunkardException(Status.JSON_DESERIALIZE_EXCEPTION.getStatus(), "JSON转换异常，" + e);
+            throw new DrunkardException(Status.DESERIALIZE_FAIL.getStatus(), "JSON转换异常，" + e);
         } catch (IOException e) {
             throw new DrunkardException(Status.IO_EXCEPTION.getStatus(), "IO异常，" + e);
         }
@@ -130,9 +130,9 @@ public class JSONUtils {
         try {
             return objectMapper.readValue(jsonString, responseType);
         } catch (JsonParseException e) {
-            throw new DrunkardException(Status.JSON_DESERIALIZE_EXCEPTION.getStatus(), "JSON转换异常，" + e);
+            throw new DrunkardException(Status.DESERIALIZE_FAIL.getStatus(), "JSON转换异常，" + e);
         } catch (JsonMappingException e) {
-            throw new DrunkardException(Status.JSON_DESERIALIZE_EXCEPTION.getStatus(), "JSON转换对应关系异常，" + e);
+            throw new DrunkardException(Status.DESERIALIZE_FAIL.getStatus(), "JSON转换对应关系异常，" + e);
         } catch (IOException e) {
             throw new DrunkardException(Status.IO_EXCEPTION.getStatus(), "IO异常，" + e);
         }
@@ -162,9 +162,9 @@ public class JSONUtils {
             JavaType javaType = javaType(parametrized, parameterClasses);
             return objectMapper.readValue(jsonString, javaType);
         } catch (JsonParseException e) {
-            throw new DrunkardException(Status.JSON_DESERIALIZE_EXCEPTION.getStatus(), "JSON转换异常，" + e);
+            throw new DrunkardException(Status.DESERIALIZE_FAIL.getStatus(), "JSON转换异常，" + e);
         } catch (JsonMappingException e) {
-            throw new DrunkardException(Status.JSON_DESERIALIZE_EXCEPTION.getStatus(), "JSON转换对应关系异常，" + e);
+            throw new DrunkardException(Status.DESERIALIZE_FAIL.getStatus(), "JSON转换对应关系异常，" + e);
         } catch (IOException e) {
             throw new DrunkardException(Status.IO_EXCEPTION.getStatus(), "IO异常，" + e);
         }
@@ -188,9 +188,9 @@ public class JSONUtils {
         try {
             return objectMapper.readValue(jsonString, javaType);
         } catch (JsonParseException e) {
-            throw new DrunkardException(Status.JSON_DESERIALIZE_EXCEPTION.getStatus(), "JSON转换异常，" + e);
+            throw new DrunkardException(Status.DESERIALIZE_FAIL.getStatus(), "JSON转换异常，" + e);
         } catch (JsonMappingException e) {
-            throw new DrunkardException(Status.JSON_DESERIALIZE_EXCEPTION.getStatus(), "JSON转换对应关系异常，" + e);
+            throw new DrunkardException(Status.DESERIALIZE_FAIL.getStatus(), "JSON转换对应关系异常，" + e);
         } catch (IOException e) {
             throw new DrunkardException(Status.IO_EXCEPTION.getStatus(), "IO异常，" + e);
         }
@@ -210,9 +210,9 @@ public class JSONUtils {
         try {
             return objectMapper.readValue(jsonString, typeReference);
         } catch (JsonParseException e) {
-            throw new DrunkardException(Status.JSON_DESERIALIZE_EXCEPTION.getStatus(), "JSON转换异常，" + e);
+            throw new DrunkardException(Status.DESERIALIZE_FAIL.getStatus(), "JSON转换异常，" + e);
         } catch (JsonMappingException e) {
-            throw new DrunkardException(Status.JSON_DESERIALIZE_EXCEPTION.getStatus(), "JSON转换对应关系异常，" + e);
+            throw new DrunkardException(Status.DESERIALIZE_FAIL.getStatus(), "JSON转换对应关系异常，" + e);
         } catch (IOException e) {
             throw new DrunkardException(Status.IO_EXCEPTION.getStatus(), "IO异常，" + e);
         }
@@ -245,9 +245,9 @@ public class JSONUtils {
         try {
             objectMapper.writeValue(file, o);
         } catch (JsonMappingException e) {
-            throw new DrunkardException(Status.JSON_SERIALIZE_EXCEPTION.getStatus(), "JSON转换对应关系异常，" + e);
+            throw new DrunkardException(Status.SERIALIZE_FAIL.getStatus(), "JSON转换对应关系异常，" + e);
         } catch (JsonGenerationException e) {
-            throw new DrunkardException(Status.JSON_SERIALIZE_EXCEPTION.getStatus(), "JSON转换异常，" + e);
+            throw new DrunkardException(Status.SERIALIZE_FAIL.getStatus(), "JSON转换异常，" + e);
         } catch (IOException e) {
             throw new DrunkardException(Status.IO_EXCEPTION.getStatus(), "IO异常，" + e);
         }
@@ -261,9 +261,9 @@ public class JSONUtils {
         try {
             objectMapper.writerWithDefaultPrettyPrinter().writeValue(file, o);
         } catch (JsonMappingException e) {
-            throw new DrunkardException(Status.JSON_SERIALIZE_EXCEPTION.getStatus(), "JSON转换对应关系异常，" + e);
+            throw new DrunkardException(Status.SERIALIZE_FAIL.getStatus(), "JSON转换对应关系异常，" + e);
         } catch (JsonGenerationException e) {
-            throw new DrunkardException(Status.JSON_SERIALIZE_EXCEPTION.getStatus(), "JSON字符串转换异常，" + e);
+            throw new DrunkardException(Status.SERIALIZE_FAIL.getStatus(), "JSON字符串转换异常，" + e);
         } catch (IOException e) {
             throw new DrunkardException(Status.IO_EXCEPTION.getStatus(), "IO异常，" + e);
         }
@@ -282,7 +282,7 @@ public class JSONUtils {
         try {
             return objectMapper.writeValueAsBytes(value);
         } catch (JsonProcessingException e) {
-            throw new DrunkardException(Status.JSON_SERIALIZE_EXCEPTION.getStatus(), "对象转换为字节数组异常，" + e);
+            throw new DrunkardException(Status.SERIALIZE_FAIL.getStatus(), "对象转换为字节数组异常，" + e);
         }
     }
 
@@ -315,7 +315,7 @@ public class JSONUtils {
         try {
             return objectMapper.readValue(bytes, responseType);
         } catch (IOException e) {
-            throw new DrunkardException(Status.JSON_DESERIALIZE_EXCEPTION.getStatus(), "数据转换为对象异常，" + e);
+            throw new DrunkardException(Status.DESERIALIZE_FAIL.getStatus(), "数据转换为对象异常，" + e);
         }
     }
 
@@ -329,7 +329,7 @@ public class JSONUtils {
         try {
             objectMapper.writeValue(outputStream, value);
         } catch (IOException e) {
-            throw new DrunkardException(Status.JSON_DESERIALIZE_EXCEPTION.getStatus(), "转换异常，" + e);
+            throw new DrunkardException(Status.DESERIALIZE_FAIL.getStatus(), "转换异常，" + e);
         }
 
     }

@@ -16,7 +16,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date 20/11/18 11:03
  * @since 1.0.0
  */
-@MapperScan(basePackages = {"xyz.wongs.**.mapper"})
+@MapperScan(basePackages = {"io.github.rothschil.**.mapper"})
 @SpringBootApplication
 public class ImgApplication {
 

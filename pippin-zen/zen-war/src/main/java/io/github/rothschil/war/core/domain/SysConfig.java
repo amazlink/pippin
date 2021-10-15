@@ -1,7 +1,7 @@
 package io.github.rothschil.war.core.domain;
 
-import io.github.rothschil.common.po.BasePo;
 import io.github.rothschil.common.annotation.Excel;
+import io.github.rothschil.common.po.BatisPo;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
@@ -14,7 +14,7 @@ import javax.validation.constraints.Size;
  * @since 1.0.0
  */
 @SuppressWarnings("unused")
-public class SysConfig extends BasePo<Long> {
+public class SysConfig extends BatisPo<Long> {
 
     private static final long serialVersionUID = 1L;
 

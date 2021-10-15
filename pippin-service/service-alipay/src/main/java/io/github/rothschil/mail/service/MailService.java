@@ -58,13 +58,13 @@ public class MailService {
      **/
     private void checkMail(MailVo mailVo) {
         if (StringUtils.isEmpty(mailVo.getTo())) {
-            throw new DrunkardException(Status.CONTENT_IS_NULL, "收件人");
+            throw new DrunkardException(Status.TARGET_IS_EMPTY, "收件人");
         }
         if (StringUtils.isEmpty(mailVo.getSubject())) {
-            throw new DrunkardException(Status.CONTENT_IS_NULL, "邮件主题");
+            throw new DrunkardException(Status.TARGET_IS_EMPTY, "邮件主题");
         }
         if (StringUtils.isEmpty(mailVo.getText())) {
-            throw new DrunkardException(Status.CONTENT_IS_NULL, "邮件内容");
+            throw new DrunkardException(Status.TARGET_IS_EMPTY, "邮件内容");
         }
     }
 

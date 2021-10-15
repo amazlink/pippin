@@ -27,7 +27,7 @@ public class ImageController {
     @GetMapping("/ex")
     public void excute() {
         long start = System.currentTimeMillis();
-        runFileTask.run("E:\\Repertory\\Lightroom\\Exp");
+        runFileTask.run("E:\\5K Mac");
         long end = System.currentTimeMillis();
         LOG.info("耗时 cost ={} 秒", (end - start) / 1000);
     }

@@ -1,5 +1,6 @@
 package io.github.rothschil.war.core.domain;
 
+import io.github.rothschil.common.po.BatisPo;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 import io.github.rothschil.common.po.BasePo;
@@ -16,7 +17,7 @@ import javax.validation.constraints.Size;
  * @date 2019/10/9 - 23:54
  * @since 1.0.0
  */
-public class SysRole extends BasePo<Long> {
+public class SysRole extends BatisPo<Long> {
     private static final long serialVersionUID = 1L;
 
     /**

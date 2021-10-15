@@ -1,8 +1,8 @@
 package io.github.rothschil.war.core.domain;
 
+import io.github.rothschil.common.po.BatisPo;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
-import io.github.rothschil.common.po.BasePo;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -15,7 +15,7 @@ import javax.validation.constraints.Size;
  * @date 20/12/9 10:58
  * @since 1.0.0
  */
-public class SysDept extends BasePo<Long> {
+public class SysDept extends BatisPo<Long> {
 
     private static final long serialVersionUID = 1L;
 
@@ -78,6 +78,7 @@ public class SysDept extends BasePo<Long> {
     public Long getId() {
         return id;
     }
+
 
     @Override
     public void setId(Long id) {

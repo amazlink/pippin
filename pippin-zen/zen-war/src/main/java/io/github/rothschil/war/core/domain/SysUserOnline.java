@@ -7,8 +7,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import io.github.rothschil.common.enums.OnlineStatus;
 
 /**
- * @author WCNGS@QQ.COM
- * @Github <a>https://githb.com/rothschil</a>
+ * @author <a>https://githb.com/rothschil</a>
  * @date 20/12/9 10:51
  * @since 1.0.0
  */

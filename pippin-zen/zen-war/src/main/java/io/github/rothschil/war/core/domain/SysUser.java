@@ -6,6 +6,7 @@ import io.github.rothschil.common.annotation.Excel.ColumnType;
 import io.github.rothschil.common.annotation.Excel.Type;
 import io.github.rothschil.common.annotation.Excels;
 import io.github.rothschil.common.po.BasePo;
+import io.github.rothschil.common.po.BatisPo;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
@@ -15,12 +16,14 @@ import javax.validation.constraints.Size;
 import java.util.Date;
 import java.util.List;
 
-/** 用户对象 sys_user
+/**
+ * 用户对象 sys_user
+ *
  * @author <a href="https://github.com/rothschil">Sam</a>
  * @date 2019/10/9 - 23:54
  * @since 1.0.0
  */
-public class SysUser extends BasePo<Long> {
+public class SysUser extends BatisPo<Long> {
     private static final long serialVersionUID = 1L;
 
     /**

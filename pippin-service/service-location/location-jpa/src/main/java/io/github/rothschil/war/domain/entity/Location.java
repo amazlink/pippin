@@ -1,7 +1,7 @@
 package io.github.rothschil.war.domain.entity;
 
+import io.github.rothschil.base.persistence.jpa.entity.BaseJpaPo;
 import lombok.*;
-import io.github.rothschil.base.persistence.jpa.entity.BasePo;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -23,7 +23,7 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @Entity
 @Table(name = "tb_locations")
-public class Location extends BasePo<Long> {
+public class Location extends BaseJpaPo<Long> {
 
     @Id
     @Column(name = "id", nullable = false)

@@ -3,6 +3,7 @@ package io.github.rothschil.war.core.domain;
 import io.github.rothschil.common.annotation.Excel;
 import io.github.rothschil.common.annotation.Excel.ColumnType;
 import io.github.rothschil.common.po.BasePo;
+import io.github.rothschil.common.po.BatisPo;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
@@ -16,7 +17,7 @@ import javax.validation.constraints.Size;
  * @date 20/12/9 10:50
  * @since 1.0.0
  */
-public class SysPost extends BasePo<Long> {
+public class SysPost extends BatisPo<Long> {
     private static final long serialVersionUID = 1L;
 
     /**

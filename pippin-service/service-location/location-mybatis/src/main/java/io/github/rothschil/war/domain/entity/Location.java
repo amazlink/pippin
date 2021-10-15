@@ -1,14 +1,16 @@
 package io.github.rothschil.war.domain.entity;
 
-import lombok.*;
 import io.github.rothschil.common.po.BasePo;
+import lombok.*;
 
-/** 行政区域实体类
+/**
+ * 行政区域实体类
+ *
  * @author WCNGS@QQ.COM
  * @date 2020/9/9 15:27
  * @since 1.0.0
-*/
-@Builder(toBuilder=true)
+ */
+@Builder(toBuilder = true)
 @Setter
 @Getter
 @AllArgsConstructor
@@ -30,11 +32,11 @@ public class Location extends BasePo<Long> {
     private String url;
 
     public Location(Long id, String localName, String supLocalCode, String url, Integer lv) {
-        this.id=id;
+        this.id = id;
         this.localName = localName;
         this.supLocalCode = supLocalCode;
         this.url = url;
-        this.lv=lv;
+        this.lv = lv;
     }
 
     public Location(String localCode, String localName, String supLocalCode, String url, Integer lv) {
@@ -43,17 +45,17 @@ public class Location extends BasePo<Long> {
         this.localName = localName;
         this.supLocalCode = supLocalCode;
         this.url = url;
-        this.lv=lv;
+        this.lv = lv;
     }
 
-    public Location(String localCode, String localName, String supLocalCode, String url, Integer lv,String flag) {
+    public Location(String localCode, String localName, String supLocalCode, String url, Integer lv, String flag) {
         super();
         this.localCode = localCode;
         this.localName = localName;
         this.supLocalCode = supLocalCode;
         this.url = url;
-        this.lv=lv;
-        this.flag=flag;
+        this.lv = lv;
+        this.flag = flag;
     }
 
 }
