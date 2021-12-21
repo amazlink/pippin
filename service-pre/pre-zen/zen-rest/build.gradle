@@ -1,0 +1,11 @@
+archivesBaseName = 'zen-rest'
+dependencies {
+
+
+    implementation("io.github.rothschil:persistence-jpa:1.2.2.RELEASE"){
+        exclude group:'com.oracle', module: 'ojdbc6'
+    }
+    implementation('org.springframework.boot:spring-boot-starter-data-rest')
+
+}
+bootJar.enabled = true
