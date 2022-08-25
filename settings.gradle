@@ -1,13 +1,1 @@
 rootProject.name = 'pippin'
-
-
-include 'service-alipay'
-include 'service-image'
-include 'service-jwt'
-include 'service-location:location-jpa'
-include 'service-location:location-mybatis'
-include 'service-oauth2:oauth2-resource'
-include 'service-oauth2:oauth2-server'
-include 'service-pre:pre-technical'
-
-
