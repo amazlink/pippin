@@ -6,6 +6,7 @@ plugins {
 apply plugin: 'io.spring.dependency-management'
 apply plugin: 'maven-publish'
 
+
 version project_version
 group project_group
 
@@ -15,14 +16,27 @@ repositories {
 }
 
 jar {
-    enabled = false
+//    enabled = false
     // 禁用档案后缀，处理 **-plain.jar
     archiveClassifier = ''
 }
 // 默认不需要打可执行jar包
 bootJar {
-    enabled = false
+    enabled = true
 }
+
+
+dependencies {
+    annotationProcessor('org.projectlombok:lombok:1.18.20')
+    testImplementation('org.projectlombok:lombok:1.18.20')
+    testAnnotationProcessor('org.projectlombok:lombok:1.18.20')
+    implementation('org.projectlombok:lombok:1.18.20')
+    testImplementation("org.springframework.boot:spring-boot-starter-test:$SpringBootVersion") {
+    }
+
+    implementation("org.springframework.boot:spring-boot-starter-web:$SpringBootVersion")
+}
+
 
 // 只针对子目录进行生效
 subprojects {
@@ -63,14 +77,11 @@ subprojects {
         annotationProcessor('org.projectlombok:lombok:1.18.20')
         testImplementation('org.projectlombok:lombok:1.18.20')
         testAnnotationProcessor('org.projectlombok:lombok:1.18.20')
-        testImplementation("org.springframework.boot:spring-boot-starter-test:$SpringBootVersion") {
-//            exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
-//            exclude group: 'org.junit.jupiter', module: 'junit-jupiter-api'
-//            exclude group: 'net.minidev', module: 'json-smart'
-//            exclude group: 'net.bytebuddy', module: 'byte-buddy'
-//            exclude group: 'net.bytebuddy', module: 'byte-buddy-agent'
-        }
         implementation('org.projectlombok:lombok:1.18.20')
+        testImplementation("org.springframework.boot:spring-boot-starter-test:$SpringBootVersion") {
+        }
+
+        implementation("org.springframework.boot:spring-boot-starter-web:$SpringBootVersion")
     }
 
     test {

@@ -47,37 +47,49 @@
 
 ## 3. 目录结构
 
+
 ~~~
-|---.gradle
-|---Doc                 ------------------文档
-|---gradle              ------------------Gradle配置文件
-│  └─wrapper
-│          gradle-wrapper.jar           --gradle-wrapper 主题功能
-│          gradle-wrapper.properties    --Gradle当前配置的版本，以及从哪里获取
-|---pippin-service      ------------------样例服务
-|   \---service-jwt     ------------------JWT服务示例
-|       └─src
-|   |       ├─main
-|   |       │  └─resources
-|   |       │     ├─application.yml
-|   |       │       ├─config.properties
-|   |       │  ├─config
-|   |       │  │  ├─dev
-|   |       │  │  │ ├─application.prperties ----开发环境配置
-|   |       │  │  │      
-|   |       │  │  └─prod
-|   |       │  │    ├─application.prperties ----生产环境配置
-|   |   │  build.gradle     ------------------构建文件
-|   │   |  dependencies-dev.gradle  ----------开发环境配置
-|   │   |  dependencies-prod.gradle ----------生产环境配置
-|   │   |  dependencies-test.gradle ----------测试环境配置
-│  .gitignore           ------------------配置git忽略索要文件
-│  build.gradle         ------------------根目录的构建核心文件
-│  gradle.properties    ------------------根目录的属性文件，这是默认命名
-│  gradlew              
-│  gradlew.bat          ------------------Gradle Wrapper
-│  LICENSE              ------------------开源授权协议
-│  README.md            ------------------项目描述
-│  settings.gradle      ------------------Gradle模块 配置文件
+
+|-- Doc                 ------------------文档
+|-- README.md
+|-- build
+|   `-- bootJarMainClassName
+|-- build.gradle        ------------------Gradle配置文件
+|-- gradle
+|   `-- wrapper
+|       |-- gradle-wrapper.jar  -gradle-wrapper 主题功能
+|       `-- gradle-wrapper.properties   --Gradle当前配置的版本，以及从哪里获取
+|-- gradle.properties       ------------------根目录的属性文件，这是默认命名
+|-- gradlew
+|-- gradlew.bat
+|-- settings.gradle         ------------------Gradle模块 配置文件
+`-- src
+    |-- main
+    |   |-- java
+    |   |   `-- io
+    |   |       `-- github
+    |   |           `-- rothschil
+    |   |               |-- PippinApplication.java
+    |   |               `-- web
+    |   |                   `-- IndexController.java
+    |   `-- resources
+    |       |-- application.properties
+    |       |-- favicon.ico
+    |       |-- logback.xml
+    |       |-- static
+    |       |   `-- schema
+    |       |       |-- schema-book.graphql
+    |       |       |-- schema-enum.graphql
+    |       |       |-- schema-user.graphql
+    |       |       `-- schema.graphql
+    |       `-- templates
+    `-- test
+        |-- java
+        |   `-- io
+        |       `-- github
+        |           `-- rothschil
+        |               `-- base
+        `-- resources
+
 
 ~~~
