@@ -9,9 +9,5 @@ include 'service-location:location-mybatis'
 include 'service-oauth2:oauth2-resource'
 include 'service-oauth2:oauth2-server'
 include 'service-pre:pre-technical'
-include 'service-pre:pre-zen:zen-web'
-include 'service-pre:pre-zen:zen-dataql'
-include 'service-pre:pre-zen:zen-rest'
-include 'service-pre:pre-zen:zen-magic'
 
 
